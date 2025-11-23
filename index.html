@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/69951f3ecb.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+           <li>
+  <a href="https://github.com/dinakaran77/blood-donar-system" target="_blank">
+    Projects
+  </a>
+</li>
+
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <h1>Hi Iam <span>Tinakar</span></h1><br>
+          <p>Python Programmer | Web Developer Learner | Devops Learner</p>
+        </div>
+      </div>
+    </div>
+    <!-- ------------about---------------->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/users.jpeg" alt="User Photo" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1><br>
+            <p>
+              Hi! I'm <strong>Tinakar</strong>, a passionate and curious
+              programmer who loves turning ideas into clean, functional, and
+              creative code. I’m currently learning full-stack development and
+              exploring areas like DevOps, and Web development. <br /><br/>
+              I enjoy solving real-world problems through technology and
+              continuously improving my skills to become a better developer
+              every day. My goal is to work on impactful projects that help
+              people and make technology more accessible.
+              <br /><br />
+              When I’m not coding, you’ll find me exploring new tools,
+              contributing to open-source projects, or watching tech tutorials
+              on YouTube. I believe consistency, curiosity, and creativity are
+              the keys to growth in tech.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab"id="skills">
+              <ul>
+                <li>
+                  <span>Python</span><br/>Ml&AI(Training predicitive Models and
+                  Evaluation)
+                </li>
+                <li>
+                  <span>Web development</span><br/>Designing Web/App Interface
+                </li>
+                <li>
+                  <span>Devops</span><br/>Infrastructure Management, CI/CD
+                  automation and Cloud Scripts
+                </li>
+              </ul>
+            </div>
+              <div class="tab-contents" id="experience">
+                <ul>
+                  <li>
+                    <span>2023</span><br/>Web developer-Intern at Webronic
+                    Solutions Private Limited
+                  </li>
+                </ul>
+              </div>
+               <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>SSLC - 2014 - 2016</span><br/>completed  SSLC from Malco Vidayalaya Matric Higher Secondary School, securing 80%
+                </li>
+                <li>
+                  <span>HSLC - 2016 - 2018</span><br/>Completed HSLC, Jems International Higher Secondary School – 50%.
+                </li>
+                <li>
+                  <span>UG(UNDER-GRADUATE) - 2020 - 2022</span><br/> completed my Bachelor's degree in Computer Applications (BCA) at Sona College of Arts and Science with 72%.
+                </li>
+                <li>
+                  <span>PG(POST-GRADUATE) - 2023 - 2025</span><br> Completed Master’s degree in Computer Applications (MCA) from Karpagam College with a CGPA of 7.0.
+                </li>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn">See more</a>
+      </div>
+     </div>
+     <!-- ----contact -------- -->
+     <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+
+    <h1 style="font-size:40px; margin-bottom:20px;">Contact Me</h1>
+
+    <!-- Email -->
+      <p>
+          <i class="fa-solid fa-envelope"></i>
+         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dinakaranpalani777@gmail.com" target="_blank">
+  dinakaranpalani777@gmail.com
+</a>
+
+        </p><br>
+    <!-- Phone -->
+    <a href="tel:6383101939" 
+       style="text-decoration:none; color:white; display:flex; align-items:center; margin-bottom:15px;">
+        <i class="fa-solid fa-phone" style="color:#ff0055; font-size:22px; margin-right:10px;"></i>
+        6383101939
+    </a><br>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/tinakar" style="text-decoration:none; color:white; display:flex; align-items:center;">
+        <i class="fa-brands fa-linkedin" style="font-size:28px;"></i><br>
+         <a href="images/my-cv.pdf.pdf" download class="btn btn2">Download Resume</a>
+    </a>
+          <div class="contact-right"></div>
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+             <input type="email" name="Email" placeholder="Your Email" required>
+             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+              <span id="msg">   </span>
+          </form>
+        </div>
+      </div>
+     </div>
+    </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links") 
+      var tabcontents = document.getElementsByClassName("tab-contents")
+      
+      function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+
+      }
+    </script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwuLiVR9s-IKYJB9vBhWDLUdvUi6ZQqo0GjWCbAA8RFsWvY5k1YThCgyG5s1W6wH9FY/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message Sent Successfully"
+        setTimeout(function(){
+          msg.innerHTML=""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</script>
+  </body>
+</html> 
